@@ -15,7 +15,7 @@ limitations under the License.
 */
 
 data "aws_ami" "coreos" {
-  most_recent = false
+  most_recent = true
   owners = [595879546273]
   filter {
     name = "name"
@@ -24,10 +24,6 @@ data "aws_ami" "coreos" {
   filter {
     name = "virtualization-type"
     values = ["hvm"]
-  }
-  filter {
-    name = "image-id"
-    values = ["ami-ad593cbb"]
   }
 }
 

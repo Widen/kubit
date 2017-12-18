@@ -63,6 +63,7 @@ resource "aws_iam_instance_profile" "workers" {
 resource "aws_iam_role" "workers" {
   assume_role_policy = "${data.aws_iam_policy_document.workers_assume_role.json}"
   name = "${var.cluster_name}-workers"
+  force_detach_policies = "false"
 }
 
 resource "aws_iam_role_policy" "workers" {
