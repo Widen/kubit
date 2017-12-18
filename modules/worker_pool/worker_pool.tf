@@ -27,7 +27,7 @@ data "aws_ami" "coreos" {
   }
   filter {
     name = "image-ids"
-    values = "ami-ad593cbb"
+    values = ["ami-ad593cbb"]
   }
 }
 
