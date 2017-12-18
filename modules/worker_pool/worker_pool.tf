@@ -26,7 +26,7 @@ data "aws_ami" "coreos" {
     values = ["hvm"]
   }
   filter {
-    name = "image-ids"
+    name = "image-id"
     values = ["ami-ad593cbb"]
   }
 }
